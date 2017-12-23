@@ -1,0 +1,20 @@
+{
+  "name": "minis.css",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "wass80 <wasss80@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize-css": "^7.0.0"
+  }
+}
