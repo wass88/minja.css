@@ -212,6 +212,7 @@ pre {
   line-height: 1.1;
   font-size: 80%;
   padding: 1em;
-  overflow-x: auto; }
+  overflow-x: auto;
+  margin: 26px 0; }
 
 /*# sourceMappingURL=minis.min.css.map */
