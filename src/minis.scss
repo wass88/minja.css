@@ -1,4 +1,7 @@
 @import "./notosansjp.scss";
+@import "./yakuhanjp.scss";
+@import "./cssicon.scss";
+
 * { padding: 0; margin: 0; }
 
 $fore-color: #eeeeee;
@@ -6,55 +9,76 @@ $back-color: #212121;
 $fore-theme-color: #81C784;
 $back-theme-color: #2E7D32;
 
-$base-root-font-size: 16px;
+$base-root-font-size: 15px;
 $base-font-family:
-  '\"Noto Sans JP\",-apple-system, BlinkMacSystemFont,\"Segoe UI\",\"Roboto\", \"Droid Sans\",\"Helvetica Neue\", Helvetica, Arial, sans-serif';
-$base-line-height: 2; // 32 px
-$base-root-letter-spacing: 0.125em;
+  'YakuHanRP, \"Noto Sans JP\",-apple-system, BlinkMacSystemFont,\"Segoe UI\",\"Roboto\", \"Droid Sans\",\"Helvetica Neue\", Helvetica, Arial, sans-serif';
+$v-rhythms: 26px;
+
+$main-width: 740px;
 
 html {
   font-size: $base-root-font-size;  // Set root's font sizing.
   font-family: #{$base-font-family};
-  line-height: $base-line-height;
-  letter-spacing: $base-root-letter-spacing;
+  line-height: $v-rhythms;
+  letter-spacing: 0.09em;
   font-feature-settings: "palt" on;
+  text-align: justify;
   word-wrap : break-word;
   overflow-wrap : break-word;
 }
 
-h1 { // 128 px
-  font-size: 300%; // 96 px 24
-  margin-top: 48px;
-  margin-bottom: -16px;
+h1 {
+  font-size: 200%;
+  line-height: $v-rhythms * 2;
+  margin: $v-rhythms 0;
+  position: relative;
 }
-h2 { // 96 px
-  font-size: 250%; // 80 px 20
-  margin-top: 28px;
-  margin-bottom: -12px;
+h1::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 10px;
+  position: absolute;
+  bottom: -4px;
+  background-image:
+  repeating-linear-gradient(90deg,
+   $fore-color, $fore-color 1px, transparent 1px, transparent 4px);
 }
-h3 { // 64 px
-  font-size: 200%; // 64 px 16
-  margin-top: 8px;
-  margin-bottom: -8px;
+h2 {
+  font-size: 150%;
+  margin: $v-rhythms 0;
 }
-h4 { // 64 px
-  font-size: 150%; // 48px 12
-  margin-top: 20px;
-  margin-bottom: -4px;
+h3 {
+  font-size: 125%;
+  margin: $v-rhythms 0;
 }
-h5 { // 64 px
-  font-size: 125%; // 40 px 10
-  margin-top: 26px;
-  margin-bottom: -2px;
+h4 {
+  font-size: 112.5%;
+  margin: $v-rhythms 0;
 }
-h6 { // 64 px
-  font-size: 112.5%; // 36 px 9
-  margin-top: 29px;
-  margin-bottom: -1px;
+h5 {
+  font-weight: bolder;
+  margin: $v-rhythms 0;
+}
+h6 {
+  margin: $v-rhythms 0;
 }
 
 p {
-  margin-top: 32px;
+  margin: $v-rhythms 0;
+  font-feature-settings: "palt" off;
+}
+
+hr {
+  background-image:
+  repeating-linear-gradient(90deg,
+    $fore-color,
+    $fore-color 12px, transparent 12px,
+    transparent 16px, $fore-color 16px, 
+    $fore-color 20px, transparent 20px,
+    transparent 24px, $fore-color 24px);
+  border: none;
+  height: 2px;
 }
 
 $header-height: 64px;
@@ -66,34 +90,31 @@ body {
 
 header[role="menu"] {
   position: fixed;
+  z-index: 1;
   top: 0;
   width: 100vw;
   height: $header-height;
-  background-color: $fore-theme-color;
-  color: $back-color;
+  padding-left: 16px;
+  background-color: $back-color;
+  box-shadow: 0 1px $fore-color, 0 3px $back-color, 0 5px $fore-color;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 1px 1px #81C784;
-  padding-left: 32px;
+  ul {
+    display: inline;
+    list-style-type: none;
+    font-size: 120%;
+    li {
+      display: inline;
+      margin: 0 16px
+    }
+  }
 }
-
-$main-width: 740px;
 
 main {
   max-width: $main-width;
   margin: 0 auto;
-}
-
-ul.nav {
-  display: inline;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  li {
-    display: inline;
-    margin: 0 32px
-  }
+  padding: 0 16px;
 }
 
 a {
@@ -104,4 +125,40 @@ a {
 p a {
   text-decoration: none;
   color: $fore-theme-color;
+}
+
+main ul li{
+  margin-left: 20px;
+  list-style: none;
+  position: relative;
+
+  ::before {
+    content: '';
+    position: absolute;
+    left: -20px;
+    top: 1px;
+    margin-left: 2px;
+    margin-top: 10px;
+    width: 12px;
+    height: 2px;
+    background-color: currentColor; 
+  }
+
+  ::after {
+    content: '';
+    position: absolute;
+    left: -15px;
+    top: 7px;
+    width: 8px;
+    height: 8px;
+    border-top: solid 2px currentColor;
+    border-right: solid 2px currentColor;
+    transform: rotate(45deg);
+  }
+}
+li {
+  margin-left: 1em;
+}
+.typcn {
+  font-size: 145%;
 }

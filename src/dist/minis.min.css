@@ -1,23 +1,209 @@
 /*
-Errno::ENOENT: No such file or directory - src/minis.scss
+* Noto Sans JP (japanese) http://www.google.com/fonts/earlyaccess
+ */
+@font-face {
+  font-family: 'Noto Sans JP';
+  font-style: normal;
+  font-weight: 100;
+  src: url(//fonts.gstatic.com/ea/notosansjp/v5/NotoSansJP-Thin.woff2) format("woff2"), url(//fonts.gstatic.com/ea/notosansjp/v5/NotoSansJP-Thin.woff) format("woff"), url(//fonts.gstatic.com/ea/notosansjp/v5/NotoSansJP-Thin.otf) format("opentype");
+  font-display: swap; }
+@font-face {
+  font-family: 'Noto Sans JP';
+  font-style: normal;
+  font-weight: 300;
+  src: url(//fonts.gstatic.com/ea/notosansjp/v5/NotoSansJP-Light.woff2) format("woff2"), url(//fonts.gstatic.com/ea/notosansjp/v5/NotoSansJP-Light.woff) format("woff"), url(//fonts.gstatic.com/ea/notosansjp/v5/NotoSansJP-Light.otf) format("opentype");
+  font-display: swap; }
+@font-face {
+  font-family: 'Noto Sans JP';
+  font-style: normal;
+  font-weight: 400;
+  src: url(//fonts.gstatic.com/ea/notosansjp/v5/NotoSansJP-Regular.woff2) format("woff2"), url(//fonts.gstatic.com/ea/notosansjp/v5/NotoSansJP-Regular.woff) format("woff"), url(//fonts.gstatic.com/ea/notosansjp/v5/NotoSansJP-Regular.otf) format("opentype");
+  font-display: swap; }
+@font-face {
+  font-family: 'Noto Sans JP';
+  font-style: normal;
+  font-weight: 500;
+  src: url(//fonts.gstatic.com/ea/notosansjp/v5/NotoSansJP-Medium.woff2) format("woff2"), url(//fonts.gstatic.com/ea/notosansjp/v5/NotoSansJP-Medium.woff) format("woff"), url(//fonts.gstatic.com/ea/notosansjp/v5/NotoSansJP-Medium.otf) format("opentype");
+  font-display: swap; }
+@font-face {
+  font-family: 'Noto Sans JP';
+  font-style: normal;
+  font-weight: 700;
+  src: url(//fonts.gstatic.com/ea/notosansjp/v5/NotoSansJP-Bold.woff2) format("woff2"), url(//fonts.gstatic.com/ea/notosansjp/v5/NotoSansJP-Bold.woff) format("woff"), url(//fonts.gstatic.com/ea/notosansjp/v5/NotoSansJP-Bold.otf) format("opentype");
+  font-display: swap; }
+@font-face {
+  font-family: 'Noto Sans JP';
+  font-style: normal;
+  font-weight: 900;
+  src: url(//fonts.gstatic.com/ea/notosansjp/v5/NotoSansJP-Black.woff2) format("woff2"), url(//fonts.gstatic.com/ea/notosansjp/v5/NotoSansJP-Black.woff) format("woff"), url(//fonts.gstatic.com/ea/notosansjp/v5/NotoSansJP-Black.otf) format("opentype");
+  font-display: swap; }
+/*! Yaku Han RP (Round Gothic - All Include) v3.0.0 SIL by Qrac / Based on Rounded M+ 1c */
+@font-face {
+  font-family: YakuHanRP;
+  font-style: normal;
+  font-weight: 100;
+  src: url(//cdn.jsdelivr.net/npm/yakuhanjp@3.0.0/dist/fonts/YakuHanRP/YakuHanRP-Thin.eot);
+  src: url(//cdn.jsdelivr.net/npm/yakuhanjp@3.0.0/dist/fonts/YakuHanRP/YakuHanRP-Thin.woff2) format("woff2"), url(//cdn.jsdelivr.net/npm/yakuhanjp@3.0.0/dist/fonts/YakuHanRP/YakuHanRP-Thin.woff) format("woff"); }
+@font-face {
+  font-family: YakuHanRP;
+  font-style: normal;
+  font-weight: 300;
+  src: url(//cdn.jsdelivr.net/npm/yakuhanjp@3.0.0/dist/fonts/YakuHanRP/YakuHanRP-Light.eot);
+  src: url(//cdn.jsdelivr.net/npm/yakuhanjp@3.0.0/dist/fonts/YakuHanRP/YakuHanRP-Light.woff2) format("woff2"), url(//cdn.jsdelivr.net/npm/yakuhanjp@3.0.0/dist/fonts/YakuHanRP/YakuHanRP-Light.woff) format("woff"); }
+@font-face {
+  font-family: YakuHanRP;
+  font-style: normal;
+  font-weight: 400;
+  src: url(//cdn.jsdelivr.net/npm/yakuhanjp@3.0.0/dist/fonts/YakuHanRP/YakuHanRP-Regular.eot);
+  src: url(//cdn.jsdelivr.net/npm/yakuhanjp@3.0.0/dist/fonts/YakuHanRP/YakuHanRP-Regular.woff2) format("woff2"), url(//cdn.jsdelivr.net/npm/yakuhanjp@3.0.0/dist/fonts/YakuHanRP/YakuHanRP-Regular.woff) format("woff"); }
+@font-face {
+  font-family: YakuHanRP;
+  font-style: normal;
+  font-weight: 500;
+  src: url(//cdn.jsdelivr.net/npm/yakuhanjp@3.0.0/dist/fonts/YakuHanRP/YakuHanRP-Medium.eot);
+  src: url(//cdn.jsdelivr.net/npm/yakuhanjp@3.0.0/dist/fonts/YakuHanRP/YakuHanRP-Medium.woff2) format("woff2"), url(//cdn.jsdelivr.net/npm/yakuhanjp@3.0.0/dist/fonts/YakuHanRP/YakuHanRP-Medium.woff) format("woff"); }
+@font-face {
+  font-family: YakuHanRP;
+  font-style: normal;
+  font-weight: 700;
+  src: url(//cdn.jsdelivr.net/npm/yakuhanjp@3.0.0/dist/fonts/YakuHanRP/YakuHanRP-Bold.eot);
+  src: url(//cdn.jsdelivr.net/npm/yakuhanjp@3.0.0/dist/fonts/YakuHanRP/YakuHanRP-Bold.woff2) format("woff2"), url(//cdn.jsdelivr.net/npm/yakuhanjp@3.0.0/dist/fonts/YakuHanRP/YakuHanRP-Bold.woff) format("woff"); }
+@font-face {
+  font-family: YakuHanRP;
+  font-style: normal;
+  font-weight: 800;
+  src: url(//cdn.jsdelivr.net/npm/yakuhanjp@3.0.0/dist/fonts/YakuHanRP/YakuHanRP-ExtraBold.eot);
+  src: url(//cdn.jsdelivr.net/npm/yakuhanjp@3.0.0/dist/fonts/YakuHanRP/YakuHanRP-ExtraBold.woff2) format("woff2"), url(//cdn.jsdelivr.net/npm/yakuhanjp@3.0.0/dist/fonts/YakuHanRP/YakuHanRP-ExtraBold.woff) format("woff"); }
+@font-face {
+  font-family: YakuHanRP;
+  font-style: normal;
+  font-weight: 900;
+  src: url(//cdn.jsdelivr.net/npm/yakuhanjp@3.0.0/dist/fonts/YakuHanRP/YakuHanRP-Black.eot);
+  src: url(//cdn.jsdelivr.net/npm/yakuhanjp@3.0.0/dist/fonts/YakuHanRP/YakuHanRP-Black.woff2) format("woff2"), url(//cdn.jsdelivr.net/npm/yakuhanjp@3.0.0/dist/fonts/YakuHanRP/YakuHanRP-Black.woff) format("woff"); }
+* {
+  padding: 0;
+  margin: 0; }
 
-Backtrace:
-/var/lib/gems/1.9.1/gems/sass-3.4.13/lib/sass/plugin/compiler.rb:482:in `read'
-/var/lib/gems/1.9.1/gems/sass-3.4.13/lib/sass/plugin/compiler.rb:482:in `update_stylesheet'
-/var/lib/gems/1.9.1/gems/sass-3.4.13/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-/var/lib/gems/1.9.1/gems/sass-3.4.13/lib/sass/plugin/compiler.rb:209:in `each'
-/var/lib/gems/1.9.1/gems/sass-3.4.13/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/var/lib/gems/1.9.1/gems/sass-3.4.13/lib/sass/plugin/compiler.rb:293:in `watch'
-/var/lib/gems/1.9.1/gems/sass-3.4.13/lib/sass/plugin.rb:108:in `method_missing'
-/var/lib/gems/1.9.1/gems/sass-3.4.13/lib/sass/exec/sass_scss.rb:381:in `watch_or_update'
-/var/lib/gems/1.9.1/gems/sass-3.4.13/lib/sass/exec/sass_scss.rb:51:in `process_result'
-/var/lib/gems/1.9.1/gems/sass-3.4.13/lib/sass/exec/base.rb:52:in `parse'
-/var/lib/gems/1.9.1/gems/sass-3.4.13/lib/sass/exec/base.rb:19:in `parse!'
-/var/lib/gems/1.9.1/gems/sass-3.4.13/bin/scss:13:in `<top (required)>'
-/usr/local/bin/scss:23:in `load'
-/usr/local/bin/scss:23:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Errno::ENOENT: No such file or directory - src/minis.scss"; }
+html {
+  font-size: 15px;
+  font-family: YakuHanRP, "Noto Sans JP",-apple-system, BlinkMacSystemFont,"Segoe UI","Roboto", "Droid Sans","Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 26px;
+  letter-spacing: 0.09em;
+  font-feature-settings: "palt" on;
+  text-align: justify;
+  word-wrap: break-word;
+  overflow-wrap: break-word; }
+
+h1 {
+  font-size: 200%;
+  line-height: 52px;
+  margin: 26px 0;
+  position: relative; }
+
+h1::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 10px;
+  position: absolute;
+  bottom: -4px;
+  background-image: repeating-linear-gradient(90deg, #eeeeee, #eeeeee 1px, transparent 1px, transparent 4px); }
+
+h2 {
+  font-size: 150%;
+  margin: 26px 0; }
+
+h3 {
+  font-size: 125%;
+  margin: 26px 0; }
+
+h4 {
+  font-size: 112.5%;
+  margin: 26px 0; }
+
+h5 {
+  font-weight: bolder;
+  margin: 26px 0; }
+
+h6 {
+  margin: 26px 0; }
+
+p {
+  margin: 26px 0;
+  font-feature-settings: "palt" off; }
+
+hr {
+  background-image: repeating-linear-gradient(90deg, #eeeeee, #eeeeee 12px, transparent 12px, transparent 16px, #eeeeee 16px, #eeeeee 20px, transparent 20px, transparent 24px, #eeeeee 24px);
+  border: none;
+  height: 2px; }
+
+body {
+  background-color: #212121;
+  color: #eeeeee;
+  padding-top: 80px; }
+
+header[role="menu"] {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  width: 100vw;
+  height: 64px;
+  padding-left: 16px;
+  background-color: #212121;
+  box-shadow: 0 1px #eeeeee, 0 3px #212121, 0 5px #eeeeee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+header[role="menu"] ul {
+  display: inline;
+  list-style-type: none;
+  font-size: 120%; }
+header[role="menu"] ul li {
+  display: inline;
+  margin: 0 16px; }
+
+main {
+  max-width: 740px;
+  margin: 0 auto;
+  padding: 0 16px; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+
+p a {
+  text-decoration: none;
+  color: #81C784; }
+
+main ul li {
+  margin-left: 20px;
+  list-style: none;
+  position: relative; }
+main ul li ::before {
+  content: '';
+  position: absolute;
+  left: -20px;
+  top: 1px;
+  margin-left: 2px;
+  margin-top: 10px;
+  width: 12px;
+  height: 2px;
+  background-color: currentColor; }
+main ul li ::after {
+  content: '';
+  position: absolute;
+  left: -15px;
+  top: 7px;
+  width: 8px;
+  height: 8px;
+  border-top: solid 2px currentColor;
+  border-right: solid 2px currentColor;
+  transform: rotate(45deg); }
+
+li {
+  margin-left: 1em; }
+
+.typcn {
+  font-size: 145%; }
+
+/*# sourceMappingURL=minis.min.css.map */
