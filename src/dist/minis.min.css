@@ -211,6 +211,7 @@ pre {
   border-radius: 3px;
   line-height: 1.1;
   font-size: 80%;
-  padding: 1em; }
+  padding: 1em;
+  overflow-x: auto; }
 
 /*# sourceMappingURL=minis.min.css.map */
