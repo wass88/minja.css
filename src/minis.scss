@@ -161,14 +161,13 @@ a:visited {
 
 }
 
-.no-color {
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
-  a:visited {
-    color: inherit;
-  }
+a.no-color {
+  text-decoration: none;
+  color: inherit;
+}
+
+a.no-color:visited {
+  color: inherit;
 }
 
 .typcn {

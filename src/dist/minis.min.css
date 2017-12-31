@@ -189,10 +189,11 @@ a:hover {
 a:visited {
   color: #93b595; }
 
-.no-color a {
+a.no-color {
   text-decoration: none;
   color: inherit; }
-.no-color a:visited {
+
+a.no-color:visited {
   color: inherit; }
 
 .typcn {
