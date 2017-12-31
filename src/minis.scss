@@ -2,7 +2,7 @@
 @import "./yakuhanjp.scss";
 @import "./cssicon.scss";
 
-* { padding: 0; margin: 0; }
+%reset { padding: 0; margin: 0; }
 
 $fore-color: #eeeeee;
 $back-color: #212121;
@@ -17,6 +17,7 @@ $v-rhythms: 26px;
 $main-width: 740px;
 
 html {
+  @extend %reset;
   font-size: $base-root-font-size;  // Set root's font sizing.
   font-family: #{$base-font-family};
   line-height: $v-rhythms;
@@ -28,12 +29,14 @@ html {
 }
 
 h1 {
+  @extend %reset;
   font-size: 200%;
   line-height: $v-rhythms * 2;
   margin: $v-rhythms 0;
   position: relative;
 }
 h1::before {
+  @extend %reset;
   content: "";
   display: block;
   width: 100%;
@@ -45,31 +48,38 @@ h1::before {
    $fore-color, $fore-color 1px, transparent 1px, transparent 4px);
 }
 h2 {
+  @extend %reset;
   font-size: 150%;
   margin: $v-rhythms 0;
 }
 h3 {
+  @extend %reset;
   font-size: 125%;
   margin: $v-rhythms 0;
 }
 h4 {
+  @extend %reset;
   font-size: 112.5%;
   margin: $v-rhythms 0;
 }
 h5 {
+  @extend %reset;
   font-weight: bolder;
   margin: $v-rhythms 0;
 }
 h6 {
+  @extend %reset;
   margin: $v-rhythms 0;
 }
 
 p {
+  @extend %reset;
   margin: $v-rhythms 0;
   font-feature-settings: "palt" off;
 }
 
 hr {
+  @extend %reset;
   background-image:
   repeating-linear-gradient(90deg,
     $fore-color,
@@ -83,12 +93,14 @@ hr {
 
 $header-height: 64px;
 body {
+  @extend %reset;
   background-color: $back-color;
   color: $fore-color;
   padding-top: $header-height + 16px;
 }
 
 header[role="menu"] {
+  @extend %reset;
   position: fixed;
   z-index: 1;
   top: 0;
@@ -109,61 +121,39 @@ header[role="menu"] {
       margin: 0 16px
     }
   }
+  a {
+    color: inherit;
+  }
 }
 
 main {
+  @extend %reset;
   max-width: $main-width;
   margin: 0 auto;
   padding: 0 16px;
 }
 
 a {
-  text-decoration: none;
-  color: inherit;
-}
-
-p a {
+  @extend %reset;
   text-decoration: none;
   color: $fore-theme-color;
 }
 
-main ul li{
-  margin-left: 20px;
-  list-style: none;
-  position: relative;
-
-  ::before {
-    content: '';
-    position: absolute;
-    left: -20px;
-    top: 1px;
-    margin-left: 2px;
-    margin-top: 10px;
-    width: 12px;
-    height: 2px;
-    background-color: currentColor; 
-  }
-
-  ::after {
-    content: '';
-    position: absolute;
-    left: -15px;
-    top: 7px;
-    width: 8px;
-    height: 8px;
-    border-top: solid 2px currentColor;
-    border-right: solid 2px currentColor;
-    transform: rotate(45deg);
-  }
+a:hover {
+  text-shadow: 0 0 2px $fore-theme-color;
 }
-li {
-  margin-left: 1em;
+
+a:visited {
+  color: desaturate($fore-theme-color, 40%);
+
 }
+
 .typcn {
   font-size: 145%;
 }
 
 pre {
+  @extend %reset;
   background-color: #000;
   border-radius: 3px;
   line-height: 1.1;
@@ -171,4 +161,11 @@ pre {
   padding: 1em;
   overflow-x: auto;
   margin: $v-rhythms 0;
+}
+
+code {
+  background-color: #000;
+  border-radius: 3px;
+  font-size: 80%;
+  padding: 0.3em;
 }

@@ -80,7 +80,7 @@
   font-weight: 900;
   src: url(//cdn.jsdelivr.net/npm/yakuhanjp@3.0.0/dist/fonts/YakuHanRP/YakuHanRP-Black.eot);
   src: url(//cdn.jsdelivr.net/npm/yakuhanjp@3.0.0/dist/fonts/YakuHanRP/YakuHanRP-Black.woff2) format("woff2"), url(//cdn.jsdelivr.net/npm/yakuhanjp@3.0.0/dist/fonts/YakuHanRP/YakuHanRP-Black.woff) format("woff"); }
-* {
+html, h1, h1::before, h2, h3, h4, h5, h6, p, hr, body, header[role="menu"], main, a, pre {
   padding: 0;
   margin: 0; }
 
@@ -161,6 +161,8 @@ header[role="menu"] ul {
 header[role="menu"] ul li {
   display: inline;
   margin: 0 16px; }
+header[role="menu"] a {
+  color: inherit; }
 
 main {
   max-width: 740px;
@@ -169,39 +171,13 @@ main {
 
 a {
   text-decoration: none;
-  color: inherit; }
-
-p a {
-  text-decoration: none;
   color: #81C784; }
 
-main ul li {
-  margin-left: 20px;
-  list-style: none;
-  position: relative; }
-main ul li ::before {
-  content: '';
-  position: absolute;
-  left: -20px;
-  top: 1px;
-  margin-left: 2px;
-  margin-top: 10px;
-  width: 12px;
-  height: 2px;
-  background-color: currentColor; }
-main ul li ::after {
-  content: '';
-  position: absolute;
-  left: -15px;
-  top: 7px;
-  width: 8px;
-  height: 8px;
-  border-top: solid 2px currentColor;
-  border-right: solid 2px currentColor;
-  transform: rotate(45deg); }
+a:hover {
+  text-shadow: 0 0 2px #81C784; }
 
-li {
-  margin-left: 1em; }
+a:visited {
+  color: #a4a4a4; }
 
 .typcn {
   font-size: 145%; }
@@ -214,5 +190,11 @@ pre {
   padding: 1em;
   overflow-x: auto;
   margin: 26px 0; }
+
+code {
+  background-color: #000;
+  border-radius: 3px;
+  font-size: 80%;
+  padding: 0.3em; }
 
 /*# sourceMappingURL=minis.min.css.map */
