@@ -189,6 +189,12 @@ a:hover {
 a:visited {
   color: #93b595; }
 
+.no-color a {
+  text-decoration: none;
+  color: inherit; }
+.no-color a:visited {
+  color: inherit; }
+
 .typcn {
   font-size: 145%; }
 

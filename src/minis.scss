@@ -161,6 +161,16 @@ a:visited {
 
 }
 
+.no-color {
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  a:visited {
+    color: inherit;
+  }
+}
+
 .typcn {
   font-size: 145%;
 }
