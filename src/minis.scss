@@ -51,6 +51,19 @@ h2 {
   @extend %reset;
   font-size: 150%;
   margin: $v-rhythms 0;
+  position: relative;
+}
+h2::before {
+  @extend %reset;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  bottom: -4px;
+  background-image:
+  repeating-linear-gradient(90deg,
+   $fore-color, $fore-color 1px, transparent 1px, transparent 4px);
 }
 h3 {
   @extend %reset;
@@ -144,7 +157,7 @@ a:hover {
 }
 
 a:visited {
-  color: desaturate($fore-theme-color, 40%);
+  color: desaturate($fore-theme-color, 20%);
 
 }
 
