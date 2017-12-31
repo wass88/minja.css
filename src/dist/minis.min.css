@@ -200,6 +200,8 @@ pre {
   padding: 1em;
   overflow-x: auto;
   margin: 26px 0; }
+pre code {
+  padding: 0; }
 
 code {
   background-color: #000;
