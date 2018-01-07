@@ -190,8 +190,33 @@ pre {
 }
 
 code {
+  @extend %reset;
   background-color: #000;
   border-radius: 3px;
   font-size: 80%;
   padding: 0.3em;
+}
+
+footer::before {
+  content: "";
+  background-color: $fore-color;
+  height: 6px;
+  width: 100%;
+  mask-image: inline-image("./foot-border.svg");
+  mask-repeat: x-repeat;
+  mask-size: 10px;
+  -webkit-mask-image: inline-image("./foot-border.svg");
+  -webkit-mask-repeat: x-repeat;
+  -webkit-mask-size: 10px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+footer {
+  @extend %reset;
+  margin: $v-rhythms 0;
+  padding: 10px 32px 0 32px;
+  position:relative;
+  color: darken($fore-color, 40%);
 }
