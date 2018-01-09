@@ -200,14 +200,10 @@ code {
 footer::before {
   content: "";
   background-color: $fore-color;
-  height: 6px;
+  height: 10px;
   width: 100%;
   mask-image: inline-image("./foot-border.svg");
-  mask-repeat: x-repeat;
-  mask-size: 10px;
   -webkit-mask-image: inline-image("./foot-border.svg");
-  -webkit-mask-repeat: x-repeat;
-  -webkit-mask-size: 10px;
   position: absolute;
   top: 0px;
   left: 0px;
