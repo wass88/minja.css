@@ -15,6 +15,8 @@ $v-rhythms: 26px;
 
 $main-width: 740px;
 
+/* Global Layout */
+
 html {
   @extend %reset;
   font-size: $base-root-font-size;  // Set root's font sizing.
@@ -26,6 +28,73 @@ html {
   word-wrap : break-word;
   overflow-wrap : break-word;
 }
+
+$header-height: 64px;
+
+body {
+  @extend %reset;
+  background-color: $back-color;
+  color: $fore-color;
+  padding-top: $header-height + 16px;
+}
+
+body > main {
+  @extend %reset;
+  max-width: $main-width;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+body > header {
+  @extend %reset;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  width: 100vw;
+  height: $header-height;
+  padding-left: 16px;
+  background-color: $back-color;
+  box-shadow: 0 1px $fore-color, 0 3px $back-color, 0 5px $fore-color;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  ul {
+    @extend %reset;
+    display: inline;
+    list-style-type: none;
+    font-size: 120%;
+    li {
+      @extend %reset;
+      display: inline;
+      margin: 0 16px
+    }
+  }
+  a {
+    color: inherit;
+  }
+}
+
+body > footer::before {
+  content: "";
+  background-color: $fore-color;
+  height: 10px;
+  width: 100%;
+  mask-image: inline-image("./foot-border.svg");
+  -webkit-mask-image: inline-image("./foot-border.svg");
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+body > footer {
+  @extend %reset;
+  margin-top: ($v-rhythms * 3);
+  padding: 10px 32px 0 32px;
+  position:relative;
+  color: darken($fore-color, 40%);
+}
+
+/* Heading */
 
 h1 {
   @extend %reset;
@@ -84,6 +153,7 @@ h6 {
   margin: $v-rhythms 0;
 }
 
+/* Paragraph */
 p {
   @extend %reset;
   margin: $v-rhythms 0;
@@ -103,49 +173,7 @@ hr {
   height: 2px;
 }
 
-$header-height: 64px;
-body {
-  @extend %reset;
-  background-color: $back-color;
-  color: $fore-color;
-  padding-top: $header-height + 16px;
-}
-
-header[role="menu"] {
-  @extend %reset;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  width: 100vw;
-  height: $header-height;
-  padding-left: 16px;
-  background-color: $back-color;
-  box-shadow: 0 1px $fore-color, 0 3px $back-color, 0 5px $fore-color;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  ul {
-    @extend %reset;
-    display: inline;
-    list-style-type: none;
-    font-size: 120%;
-    li {
-      @extend %reset;
-      display: inline;
-      margin: 0 16px
-    }
-  }
-  a {
-    color: inherit;
-  }
-}
-
-main {
-  @extend %reset;
-  max-width: $main-width;
-  margin: 0 auto;
-  padding: 0 16px;
-}
+/* Link */
 
 a {
   @extend %reset;
@@ -175,6 +203,8 @@ a.no-color:visited {
   font-size: 145%;
 }
 
+/* Console */
+
 pre {
   @extend %reset;
   background-color: #000;
@@ -197,22 +227,26 @@ code {
   padding: 0.3em;
 }
 
-footer::before {
-  content: "";
-  background-color: $fore-color;
-  height: 10px;
-  width: 100%;
-  mask-image: inline-image("./foot-border.svg");
-  -webkit-mask-image: inline-image("./foot-border.svg");
-  position: absolute;
-  top: 0px;
-  left: 0px;
+/* Table */
+table {
+  border-spacing: 4px;
+  border-top: 1px $fore-color solid;
+  border-bottom: 1px $fore-color solid;
 }
 
-footer {
-  @extend %reset;
-  margin-top: ($v-rhythms * 3);
-  padding: 10px 32px 0 32px;
-  position:relative;
-  color: darken($fore-color, 40%);
+tr:not(:last-child) {
+  th {
+    border-bottom: 3px $fore-color double;
+  }
+  td {
+    border-bottom: 1px mix($fore-color, $back-color, 50%) dotted;
+  }
+}
+tr {
+  th {
+    padding: 8px 16px;
+  }
+  td {
+    padding: 8px 16px;
+  }
 }
